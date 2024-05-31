@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".CalcularigvActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="5"
+            android:columnCount="2"
+            android:background="#14F31D"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15">
+
+            <TextView
+                android:id="@+id/visualizar"
+                android:layout_width="67dp"
+                android:layout_height="30dp"
+                android:textSize="20sp"
+                android:text="Monto:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/etMonto"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:hint="Ingrese el monto"
+                android:textColor="@color/black"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/IGV"
+                android:layout_width="117dp"
+                android:layout_height="30dp"
+                android:textSize="20sp"
+                android:text="IGV (18%):"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/etmostrar"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/SubTotal"
+                android:layout_width="77dp"
+                android:layout_height="30dp"
+                android:textSize="20sp"
+                android:text="Subtotal:"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/etsubtot"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/Total"
+                android:layout_width="77dp"
+                android:layout_height="30dp"
+                android:textSize="20sp"
+                android:text="Total:"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/ettotal"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/btnCalcular"
+                android:layout_width="294dp"
+                android:layout_height="54dp"
+                android:backgroundTint="#102E02"
+                android:text="ingresar"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:layout_marginTop="12dp"
+                android:layout_columnSpan="2" />
+        </GridLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="#B4F8EE" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
